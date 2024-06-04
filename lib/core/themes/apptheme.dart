@@ -3,17 +3,21 @@ import 'colors.dart';
 import 'text_styles.dart';
 
 class AppTheme {
-  static ThemeData get theme {
+  final TextStyles styles;
+
+  AppTheme({required this.styles});
+
+  ThemeData get theme {
     return ThemeData(
       primaryColor: AppColors.primaryColor,
       hintColor: AppColors.accentColor,
       scaffoldBackgroundColor: AppColors.backgroundColor,
       textTheme: TextTheme(
-        displayLarge: TextStyles.headline1,
-        displayMedium: TextStyles.headline2,
-        bodyLarge: TextStyles.bodyText1,
-        bodyMedium: TextStyles.bodyText2,
-        labelLarge: TextStyles.button,
+        displayLarge: styles.headline1,
+        displayMedium: styles.headline2,
+        bodyLarge: styles.bodyText1,
+        bodyMedium: styles.bodyText2,
+        labelLarge: styles.button,
       ),
       buttonTheme: const ButtonThemeData(
         buttonColor: AppColors.buttonColor,
