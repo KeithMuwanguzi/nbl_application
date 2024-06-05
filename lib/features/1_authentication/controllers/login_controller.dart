@@ -1,5 +1,8 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:http/http.dart' as http;
 
 class LoginController extends GetxController {
   TextEditingController email = TextEditingController();
@@ -32,5 +35,24 @@ class LoginController extends GetxController {
 
   void changeVisibility() {
     isVisible.value = !isVisible.value;
+  }
+
+  Future<void> login(String email, String password) async {
+    final url =
+        Uri.parse('https://fubaappbackend.onrender.com/api/users/login');
+    final response = await http.post(
+      url,
+      headers: {'Content-Type': 'application/json'},
+      body: json.encode({'email': email, 'password': password}),
+    );
+
+    if (response.statusCode == 200) {
+      final responseData = json.decode(response.body);
+      print(responseData);
+    } else {
+      // Handle error, e.g., show an error message
+      final error = json.decode(response.body)['error'];
+      print(error);
+    }
   }
 }

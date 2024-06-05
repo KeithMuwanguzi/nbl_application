@@ -78,7 +78,14 @@ class LoginPage extends StatelessWidget {
                       const SizedBox(height: 20),
                       CustomButton(
                         text: 'Sign In',
-                        onPressed: () {},
+                        onPressed: () {
+                          if (controller.key.currentState!.validate()) {
+                            controller.login(
+                              controller.email.text.trim(),
+                              controller.password.text.trim(),
+                            );
+                          }
+                        },
                         textStyle: styles.button,
                       ),
                       const SizedBox(height: 20),

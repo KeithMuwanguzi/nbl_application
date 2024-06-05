@@ -41,6 +41,7 @@ class NormalTextField extends StatelessWidget {
           controller: controller,
           obscureText: isPassword,
           style: textStyle,
+          validator: validate,
           decoration: InputDecoration(
             hintText: hintText,
             label: Text(labelText),
@@ -101,6 +102,7 @@ class PasswordTextField extends StatelessWidget {
           controller: controller,
           obscureText: isPassword,
           style: textStyle,
+          validator: validate,
           decoration: InputDecoration(
             suffixIcon: IconButton(
               onPressed: function,
