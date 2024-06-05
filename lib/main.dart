@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:nbl/core/themes/apptheme.dart';
 import 'package:nbl/core/themes/text_styles.dart';
 import 'package:nbl/core/util/responsive.dart';
+import 'package:nbl/features/1_authentication/presentation/login.dart';
 
 //Things to remember
 //The screen size of the samsung I am working with is
@@ -26,14 +27,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       theme: appTheme.theme,
-      home: Scaffold(
-        body: Center(
-          child: Text(
-            MediaQuery.of(context).size.height.toString(),
-            style: styles.bodyText1,
-          ),
-        ),
-      ),
+      home: const LoginPage(),
     );
   }
 }
