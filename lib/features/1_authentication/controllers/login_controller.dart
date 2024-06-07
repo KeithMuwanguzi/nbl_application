@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
+import 'package:nbl/core/util/widgets/snackbar.dart';
 
 class LoginController extends GetxController {
   TextEditingController email = TextEditingController();
@@ -52,7 +53,7 @@ class LoginController extends GetxController {
     } else {
       // Handle error, e.g., show an error message
       final error = json.decode(response.body)['error'];
-      print(error);
+      CustomSnackbar.showError(error);
     }
   }
 }
