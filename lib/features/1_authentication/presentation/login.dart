@@ -8,6 +8,7 @@ import 'package:nbl/core/util/widgets/custom_button.dart';
 import 'package:nbl/core/util/widgets/social_icon.dart';
 import 'package:nbl/core/util/widgets/text_field.dart';
 import 'package:nbl/features/1_authentication/controllers/login_controller.dart';
+import 'package:nbl/features/1_authentication/presentation/signup.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
@@ -131,7 +132,9 @@ class LoginPage extends StatelessWidget {
                           ),
                           const SizedBox(width: 5),
                           GestureDetector(
-                            onTap: () {},
+                            onTap: () {
+                              Get.to(() => const SignUpPage());
+                            },
                             child: Text(
                               "SignUp",
                               style: GoogleFonts.roboto(
