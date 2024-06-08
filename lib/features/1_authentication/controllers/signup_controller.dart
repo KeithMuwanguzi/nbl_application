@@ -31,11 +31,7 @@ class SignUpController extends GetxController {
     if (email == null || email.isEmpty) {
       return 'Email can not be empty';
     }
-    String pattern = r'\w+@\w+\.\w+';
-    RegExp reg = RegExp(pattern);
-    if (!reg.hasMatch(email)) {
-      return 'Invalid Email format';
-    }
+
     return null;
   }
 
@@ -65,18 +61,25 @@ class SignUpController extends GetxController {
     isVisible2.value = !isVisible2.value;
   }
 
-  Future<void> signUp(String email, String password) async {
+  Future<void> signUp(BuildContext context, String firstName, String lastName,
+      String email, String password) async {
     final url =
-        Uri.parse('https://fubaappbackend.onrender.com/api/users/login');
+        Uri.parse('https://fubaappbackend.onrender.com/api/users/signup');
     final response = await http.post(
       url,
       headers: {'Content-Type': 'application/json'},
-      body: json.encode({'email': email, 'password': password}),
+      body: json.encode({
+        'firstname': firstName,
+        'lastname': lastName,
+        'email': email,
+        'password': password,
+      }),
     );
 
     if (response.statusCode == 200) {
       final responseData = json.decode(response.body);
       print(responseData);
+      CustomSnackbar.showInfo('Account Created successfully');
     } else {
       // Handle error, e.g., show an error message
       final error = json.decode(response.body)['error'];

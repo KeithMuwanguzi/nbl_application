@@ -98,7 +98,15 @@ class SignUpPage extends StatelessWidget {
                       CustomButton(
                         text: 'Sign Up',
                         onPressed: () {
-                          if (controller.key.currentState!.validate()) {}
+                          if (controller.key.currentState!.validate()) {
+                            controller.signUp(
+                              context,
+                              controller.firstName.text.trim(),
+                              controller.lastName.text.trim(),
+                              controller.email.text.trim(),
+                              controller.password.text.trim(),
+                            );
+                          }
                         },
                         textStyle: styles.button,
                       ),
