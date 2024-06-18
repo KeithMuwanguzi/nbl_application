@@ -9,6 +9,7 @@ import 'package:nbl/core/util/widgets/social_icon.dart';
 import 'package:nbl/core/util/widgets/text_field.dart';
 import 'package:nbl/features/1_authentication/controllers/login_controller.dart';
 import 'package:nbl/features/1_authentication/presentation/signup.dart';
+import 'package:nbl/features/home/presentation/home.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
@@ -23,7 +24,8 @@ class LoginPage extends StatelessWidget {
       body: SafeArea(
         child: ListView(children: [
           Padding(
-            padding: const EdgeInsets.fromLTRB(20, 30, 20, 20),
+            padding: EdgeInsets.fromLTRB(
+                20, MediaQuery.of(context).size.height / 7, 20, 20),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -79,12 +81,13 @@ class LoginPage extends StatelessWidget {
                       CustomButton(
                         text: 'Sign In',
                         onPressed: () {
-                          if (controller.key.currentState!.validate()) {
-                            controller.login(
-                              controller.email.text.trim(),
-                              controller.password.text.trim(),
-                            );
-                          }
+                          // if (controller.key.currentState!.validate()) {
+                          //   controller.login(
+                          //     controller.email.text.trim(),
+                          //     controller.password.text.trim(),
+                          //   );
+                          // }
+                          Get.to(() => const HomePage());
                         },
                         textStyle: styles.button,
                       ),

@@ -22,19 +22,19 @@ class SignUpPage extends StatelessWidget {
       body: SafeArea(
         child: ListView(children: [
           Padding(
-            padding: const EdgeInsets.fromLTRB(20, 30, 20, 20),
+            padding: const EdgeInsets.fromLTRB(20, 40, 20, 20),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Center(
-                  child: Image.asset(
-                    'assets/images/logo.png',
-                    height: res.smallWidget(),
-                  ),
-                ),
-                const SizedBox(
-                  height: 20,
-                ),
+                // Center(
+                //   child: Image.asset(
+                //     'assets/images/logo.png',
+                //     height: res.smallWidget(),
+                //   ),
+                // ),
+                // const SizedBox(
+                //   height: 20,
+                // ),
                 Text(
                   "Create a new account",
                   style: styles.headline2,
