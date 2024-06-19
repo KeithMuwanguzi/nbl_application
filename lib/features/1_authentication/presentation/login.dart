@@ -9,7 +9,7 @@ import 'package:nbl/core/util/widgets/social_icon.dart';
 import 'package:nbl/core/util/widgets/text_field.dart';
 import 'package:nbl/features/1_authentication/controllers/login_controller.dart';
 import 'package:nbl/features/1_authentication/presentation/signup.dart';
-import 'package:nbl/features/home/presentation/home.dart';
+import 'package:nbl/features/0_home/presentation/home.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
