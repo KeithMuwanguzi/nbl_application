@@ -8,52 +8,54 @@ class Schedule extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     const Color highlightColor = Color.fromARGB(255, 116, 9, 9);
-    return SingleChildScrollView(
-      child: Column(
-        children: [
-          Container(
-            color: Colors.black,
-            padding: const EdgeInsets.all(16.0),
-            alignment: Alignment.centerLeft,
-            child: Text(
-              'April 2024',
-              style: GoogleFonts.roboto(
-                  color: Colors.white,
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold),
+    return SafeArea(
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
+            Container(
+              color: Colors.black,
+              padding: const EdgeInsets.all(16.0),
+              alignment: Alignment.centerLeft,
+              child: Text(
+                'April 2024',
+                style: GoogleFonts.roboto(
+                    color: Colors.white,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold),
+              ),
             ),
-          ),
-          const EventCard(
-              date: 'SUN 12',
-              eventName: 'Clippers vs Knicks',
-              time: '2 - 4 PM',
-              highlightColor: highlightColor),
-          const EventCard(
-              date: 'SUN 12',
-              eventName: 'Billy Joel: 2020 Tour',
-              time: '7 - 9 PM',
-              highlightColor: highlightColor),
-          const EventCard(
-              date: 'MON 13',
-              eventName: 'Lakers vs Knicks',
-              time: '7 - 9 PM',
-              highlightColor: highlightColor),
-          const EventCard(
-              date: 'TUE 14',
-              eventName: 'Rockets vs Knicks',
-              time: '7 - 9 PM',
-              highlightColor: highlightColor),
-          const EventCard(
-              date: 'WED 15',
-              eventName: 'Suns vs Knicks',
-              time: '2 - 4 PM',
-              highlightColor: highlightColor),
-          const EventCard(
-              date: 'WED 15',
-              eventName: 'Justin Bieber Tour',
-              time: '7 - 9 PM',
-              highlightColor: highlightColor),
-        ],
+            const EventCard(
+                date: 'SUN 12',
+                eventName: 'Clippers vs Knicks',
+                time: '2 - 4 PM',
+                highlightColor: highlightColor),
+            const EventCard(
+                date: 'SUN 12',
+                eventName: 'Billy Joel: 2020 Tour',
+                time: '7 - 9 PM',
+                highlightColor: highlightColor),
+            const EventCard(
+                date: 'MON 13',
+                eventName: 'Lakers vs Knicks',
+                time: '7 - 9 PM',
+                highlightColor: highlightColor),
+            const EventCard(
+                date: 'TUE 14',
+                eventName: 'Rockets vs Knicks',
+                time: '7 - 9 PM',
+                highlightColor: highlightColor),
+            const EventCard(
+                date: 'WED 15',
+                eventName: 'Suns vs Knicks',
+                time: '2 - 4 PM',
+                highlightColor: highlightColor),
+            const EventCard(
+                date: 'WED 15',
+                eventName: 'Justin Bieber Tour',
+                time: '7 - 9 PM',
+                highlightColor: highlightColor),
+          ],
+        ),
       ),
     );
   }
