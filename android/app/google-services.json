@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "842877656899",
+    "firebase_url": "https://nbluganda-default-rtdb.firebaseio.com",
+    "project_id": "nbluganda",
+    "storage_bucket": "nbluganda.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:842877656899:android:50d329fe31d04d314a19f6",
+        "android_client_info": {
+          "package_name": "com.example.nbl"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZRvNXIbunYabxMSKh_Xp8RGxeh02OzvU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:842877656899:android:108310c292024e924a19f6",
+        "android_client_info": {
+          "package_name": "com.fubauganda.nbl"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZRvNXIbunYabxMSKh_Xp8RGxeh02OzvU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
