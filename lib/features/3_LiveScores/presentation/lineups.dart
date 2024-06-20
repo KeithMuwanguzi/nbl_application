@@ -8,7 +8,7 @@ class LineUps extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(8.0),
-      child: Column(
+      child: ListView(
         children: [
           Text(
             'Team Lineups',
@@ -22,8 +22,8 @@ class LineUps extends StatelessWidget {
             player1Image: 'assets/images/la.webp',
             player1Name: 'Player 1',
             player1Position: 'Forward',
-            player2Image: 'assets/images/la.webp',
-            player2Name: 'Player 5',
+            player2Image: 'assets/images/gsw.png',
+            player2Name: 'Player 1',
             player2Position: 'Guard',
           ),
           const SizedBox(height: 10),
@@ -31,8 +31,8 @@ class LineUps extends StatelessWidget {
             player1Image: 'assets/images/la.webp',
             player1Name: 'Player 2',
             player1Position: 'Guard',
-            player2Image: 'assets/images/la.webp',
-            player2Name: 'Player 5',
+            player2Image: 'assets/images/gsw.png',
+            player2Name: 'Player 2',
             player2Position: 'Guard',
           ),
           const SizedBox(height: 10),
@@ -40,8 +40,8 @@ class LineUps extends StatelessWidget {
             player1Image: 'assets/images/la.webp',
             player1Name: 'Player 3',
             player1Position: 'Center',
-            player2Image: 'assets/images/la.webp',
-            player2Name: 'Player 5',
+            player2Image: 'assets/images/gsw.png',
+            player2Name: 'Player 3',
             player2Position: 'Guard',
           ),
           const SizedBox(height: 10),
@@ -49,8 +49,8 @@ class LineUps extends StatelessWidget {
             player1Image: 'assets/images/la.webp',
             player1Name: 'Player 4',
             player1Position: 'Forward',
-            player2Image: 'assets/images/la.webp',
-            player2Name: 'Player 5',
+            player2Image: 'assets/images/gsw.png',
+            player2Name: 'Player 4',
             player2Position: 'Guard',
           ),
           const SizedBox(height: 10),
@@ -58,7 +58,7 @@ class LineUps extends StatelessWidget {
             player1Image: 'assets/images/la.webp',
             player1Name: 'Player 5',
             player1Position: 'Guard',
-            player2Image: 'assets/images/la.webp',
+            player2Image: 'assets/images/gsw.png',
             player2Name: 'Player 5',
             player2Position: 'Guard',
           ),
@@ -91,29 +91,63 @@ class LineupRow extends StatelessWidget {
     return SizedBox(
       height: 60, // Adjust the height as needed
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          CircleAvatar(
-            radius: 30,
-            backgroundImage: AssetImage(player1Image),
-          ),
-          const SizedBox(width: 20),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.center,
+          Row(
             children: [
-              Text(
-                player1Name,
-                style: GoogleFonts.lato(
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold,
-                ),
+              CircleAvatar(
+                radius: 30,
+                backgroundImage: AssetImage(player1Image),
               ),
-              Text(
-                player1Position,
-                style: GoogleFonts.lato(
-                  fontSize: 14,
-                  color: Colors.grey,
-                ),
+              const SizedBox(width: 5),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    player1Name,
+                    style: GoogleFonts.lato(
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  Text(
+                    player1Position,
+                    style: GoogleFonts.lato(
+                      fontSize: 14,
+                      color: Colors.grey,
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
+          Row(
+            children: [
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    player2Name,
+                    style: GoogleFonts.lato(
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  Text(
+                    player2Position,
+                    style: GoogleFonts.lato(
+                      fontSize: 14,
+                      color: Colors.grey,
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(width: 10),
+              CircleAvatar(
+                radius: 25,
+                backgroundImage: AssetImage(player2Image),
               ),
             ],
           ),
