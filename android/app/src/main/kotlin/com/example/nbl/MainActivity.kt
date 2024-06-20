@@ -1,4 +1,4 @@
-package com.example.nbl
+package com.fubauganda.nbl
 
 import io.flutter.embedding.android.FlutterActivity
 
