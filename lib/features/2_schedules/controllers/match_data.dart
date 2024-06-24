@@ -51,7 +51,7 @@ List<Match> dummyMatches = [
     record1: '9-13',
     record2: '19-07',
     description: 'NBL Rd One',
-    team1Image: "assets/images/namBlazers.jpg",
+    team1Image: "assets/images/namBalzers.jpg",
     team2Image: "assets/images/stone.jpg",
   ),
 ];
