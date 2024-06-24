@@ -87,7 +87,7 @@ class LoginPage extends StatelessWidget {
                           //     controller.password.text.trim(),
                           //   );
                           // }
-                          Get.to(() => const HomePage());
+                          Get.offAll(() => const HomePage());
                         },
                         textStyle: styles.button,
                       ),

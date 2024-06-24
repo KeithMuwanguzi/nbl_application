@@ -16,7 +16,7 @@ class HomeController extends GetxController {
     Icons.verified_user,
   ];
 
-  List texts = ['Home', 'Schedule', 'Live', 'Stats', 'User'];
+  List texts = ['For you', 'Games', 'Live', 'Stats', 'User'];
 
   var pages = [
     const News(),
